@@ -1,8 +1,10 @@
+import AllRouter from './pages/AllRouter';
 import './styles/common.css';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
+      <AllRouter />
     </div>
   );
 }
