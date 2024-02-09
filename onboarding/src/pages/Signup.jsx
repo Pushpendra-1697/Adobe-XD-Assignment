@@ -2,7 +2,10 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <div>Signup</div>
+    <div className='signup'>
+      <h1>Create your PopX account</h1>
+      
+    </div>
   )
 }
 
