@@ -1,6 +1,8 @@
 import React from 'react';
 
+const userDetails = JSON.parse(localStorage.getItem('userDetails')) ?? { name: 'Marry Doe', email: 'Marry@Gmail.Com' }; // default value
 const Profile = () => {
+  
   return (
     <div className='profile'>
       <h1>Account Settings</h1>
@@ -11,8 +13,8 @@ const Profile = () => {
             <img id='camara' src='./camara.svg' alt='camara' />
           </div>
           <div>
-            <h4>Marry Doe</h4>
-            <p>Marry@Gmail.Com</p>
+            <h4>{userDetails.name}</h4>
+            <p>{userDetails.email}</p>
           </div>
         </div>
         <div>

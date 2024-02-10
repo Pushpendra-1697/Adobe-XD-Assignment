@@ -1,10 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-const Button = ({ label, bgColor, color, isDisabled = false, redirectPath }) => {
+
+// default values for isDisabled is false, for name is Marry Doe and for email Marry@Gmail.Com according to given design
+const Button = ({ label, bgColor, color, isDisabled = false, redirectPath, email = 'Marry@Gmail.Com', name = 'Marry Doe' }) => {
     const nevigate = useNavigate();
 
     const handleClick = () => {
         nevigate(redirectPath);
+        const userDetails = { name, email };
+        localStorage.setItem('userDetails', JSON.stringify(userDetails));
+        window.location.reload();
     };
 
     return (

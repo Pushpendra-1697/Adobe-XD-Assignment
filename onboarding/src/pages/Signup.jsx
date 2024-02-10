@@ -48,7 +48,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
-        <Button label={'Create Account'} bgColor={(email && password && name && phone && agency) ? '#6C25FF' : '#CBCBCB'} color={'#ECECEC'} isDisabled={(email && password && name && phone && agency) ? false : true} redirectPath='/profile' />
+        <Button name={name} email={email} label={'Create Account'} bgColor={(email && password && name && phone && agency) ? '#6C25FF' : '#CBCBCB'} color={'#ECECEC'} isDisabled={(email && password && name && phone && agency) ? false : true} redirectPath='/profile' />
       </div>
     </div>
   );

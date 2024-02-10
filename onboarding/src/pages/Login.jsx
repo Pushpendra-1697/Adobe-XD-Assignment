@@ -18,7 +18,7 @@ const Login = () => {
           <label htmlFor='password'>Password</label>
           <input type='password' placeholder='Enter password' value={password} name='password' onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <Button label={'Login'} bgColor={(email && password) ? '#6C25FF' : '#CBCBCB'} color={'#ECECEC'} isDisabled={(email && password) ? false : true} redirectPath='/profile' />
+        <Button label={'Login'} bgColor={(email && password) ? '#6C25FF' : '#CBCBCB'} color={'#ECECEC'} isDisabled={(email && password) ? false : true} redirectPath='/profile' email={email} />
       </div>
     </div>
   );
