@@ -237,9 +237,7 @@ body {
     opacity: 0.8;
 }
 
-
-
-
+/* Media queries for mobile view */
 @media all and (min-width: 320px) and (max-width:480px) {
 
     .landing-title,

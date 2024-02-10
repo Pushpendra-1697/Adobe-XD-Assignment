@@ -7,15 +7,13 @@ import Profile from './Profile';
 
 const AllRouter = () => {
   return (
-    <div>
-        <Routes>
-            <Route path='/' element={<Landing />}></Route>
-            <Route path='/login' element={<Login />}></Route>
-            <Route path='/signup' element={<Signup />}></Route>
-            <Route path='/profile' element={<Profile />}></Route>
-        </Routes>
-    </div>
+    <Routes>
+      <Route path='/' element={<Landing />}></Route>
+      <Route path='/login' element={<Login />}></Route>
+      <Route path='/signup' element={<Signup />}></Route>
+      <Route path='/profile' element={<Profile />}></Route>
+    </Routes>
   );
 }
 
-export default AllRouter
+export default AllRouter;
