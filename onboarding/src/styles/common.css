@@ -70,24 +70,27 @@ body {
     cursor: not-allowed;
 }
 
-.login {
+.login,
+.signup {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     width: 25%;
     margin: auto;
 }
 
-.login>div {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.login>h1 {
+.login>h1,
+.signup>h1 {
     font-size: 24px;
     width: 220px;
     line-height: 29px;
+}
+
+.login>div,
+.signup>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .login>p {
@@ -114,7 +117,12 @@ body {
     font-weight: 600;
     font-size: 14px;
     z-index: 1;
-    padding: 0px 15px 0px 5px;
+    padding: 0px 0px 0px 5px;
+    min-width: 120px;
+}
+
+.form-group>label>span {
+    color: red;
 }
 
 .form-group>input {
@@ -125,15 +133,52 @@ body {
     border: none;
 }
 
-.login>div input::placeholder {
+.agency {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 40%;
+}
+
+.agency>label {
+    min-width: 200px;
+}
+
+.agency>label>span {
+    color: red;
+}
+
+.agency>div>div>input[type="radio"] {
+    color: #6C25FF;
+    width: 20px;
+    height: 20px;
+}
+
+.agency>div {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.agency>div>div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.login>div input::placeholder,
+.signup>div input::placeholder {
     opacity: 0.7;
 }
+
 
 
 @media all and (min-width: 320px) and (max-width:480px) {
 
     .landing-title,
-    .login>h1 {
+    .login>h1,
+    .signup>h1 {
         font-size: 25px;
     }
 
@@ -149,7 +194,8 @@ body {
         border-radius: 10px;
     }
 
-    .login {
+    .login,
+    .signup {
         width: 60%;
     }
 
@@ -157,9 +203,25 @@ body {
         min-width: 200px;
     }
 
-    .form-group>label,
-    .login>div input::placeholder {
+    .form-group>label>span,
+    .agency>label>span {
         font-size: 12px;
+    }
+
+    .form-group>label,
+    .login>div input::placeholder,
+    .signup>div input::placeholder {
+        font-size: 12px;
+        min-width: 100px;
+    }
+
+    .agency {
+        font-size: 12px;
+    }
+
+    .agency>div>div>input[type="radio"] {
+        width: 15px;
+        height: 15px;
     }
 
 }
